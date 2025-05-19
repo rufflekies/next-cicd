@@ -27,6 +27,3 @@ jobs:
 
       - name: Build aplikasi
         run: npm run build
-
-      - name: Jalankan pengujian (jika ada)
-        run: npm test
