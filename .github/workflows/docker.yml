@@ -1,4 +1,4 @@
-name: Deploy Next.js via Docker Compose
+name: Deploy Next.js via Docker
 
 on:
   push:
