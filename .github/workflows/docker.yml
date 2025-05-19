@@ -31,7 +31,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: 223
           script: |
-            su cd /root/docker/next-cicd
+            sudo cd /root/docker/next-cicd
             docker pull ${{ secrets.DOCKER_USERNAME }}/portfolio-app:latest
             docker compose down
             docker compose up -d
