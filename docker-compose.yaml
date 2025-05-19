@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   nextjs:
-    build: .
+    image: rufflekies/portfolio:latest
     ports:
       - "80:3000"
     environment:
