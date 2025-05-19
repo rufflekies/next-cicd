@@ -20,8 +20,8 @@ jobs:
 
       - name: Build & Push Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/portfolio-app:latest .
-          docker push ${{ secrets.DOCKER_USERNAME }}/portfolio-app:latest
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/portfolio:latest .
+          docker push ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
 
       - name: Deploy via SSH
         uses: appleboy/ssh-action@master
@@ -32,6 +32,6 @@ jobs:
           port: 223
           script: |
             cd /root/docker/next-cicd
-            docker pull ${{ secrets.DOCKER_USERNAME }}/portfolio-app:latest
+            docker pull ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
             docker compose down
             docker compose up -d
